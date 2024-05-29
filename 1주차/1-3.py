@@ -4,6 +4,11 @@
 #
 # QR Code "alphanumeric" 문자는 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\$%*+-./: 이다.
 
+#풀이법:
+# 1. input 으로 받은 데이터들을 배열에 모으기
+# 2. 다음 개념 활용: 'A' * 3  =>  'AAA'
+# 3. 한 줄씩 받았던 데이터들을 한 줄씩 변환해서 출력
+
 inputArr = []
 T = int(input("테스트 케이스 개수: ")) # 테스트 케이스 개수
 for n in range(T):

@@ -7,7 +7,7 @@ def isVPS(test):
         return False
     stack = []
     while len(test) > 0:
-        pop = test.pop()
+        pop = test.nextPop()
         if stack and pop == '(' and stack[-1] == ')':
             stack.pop()
         else:

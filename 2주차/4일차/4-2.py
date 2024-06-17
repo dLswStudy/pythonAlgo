@@ -4,7 +4,11 @@
 # 1+2+3+4+...+n >= 1000   ->    n(n+1) >= 2000    ->    n=45
 # 1 2 2 3 3 3 ... 45 45 ... 45
 
+import time
+
 a, b = map(int, (input().split()))
+
+start_time = time.process_time()
 arr = []
 cnt = 0
 for i in range(46):
@@ -15,4 +19,8 @@ for i in range(46):
         arr.append(n)
         cnt += 1
 
+print("arr = ", arr)
 print(sum(arr[a-1:]))
+
+end_time = time.process_time()
+print(f"time elapsed : {int(round((end_time - start_time) * 1000))}ms")
